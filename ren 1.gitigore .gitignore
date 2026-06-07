@@ -1,0 +1,17 @@
+# Python 忽略配置
+venv/
+__pycache__/
+*.pyc
+
+# Flutter 忽略配置
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.gradle/
+.idea/
+.vscode/
+
+# 其他忽略
+.env
