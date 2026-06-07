@@ -30,7 +30,6 @@ class _HomeState extends State<Home> {
     _load();
   }
 
-  // 修改后的搜索逻辑
   Map<String, List<String>> get filteredAlbum {
     if (searchQuery.isEmpty) return album;
 
@@ -38,14 +37,11 @@ class _HomeState extends State<Home> {
     String query = searchQuery.toLowerCase();
 
     album.forEach((category, images) {
-      // 逻辑：如果分类名匹配，或者分类下有图片名匹配
       bool categoryMatches = category.toLowerCase().contains(query);
 
       if (categoryMatches) {
-        // 如果分类名匹配，显示该分类下所有图片
         result[category] = images;
       } else {
-        // 否则，只过滤出包含搜索词的图片
         final filteredImages = images.where((img) => img.toLowerCase().contains(query)).toList();
         if (filteredImages.isNotEmpty) {
           result[category] = filteredImages;
