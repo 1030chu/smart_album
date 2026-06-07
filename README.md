@@ -7,6 +7,9 @@ smart_album
 
 cd backend
 
+venv라는 이름의 가상 환경 폴더를 생성합니다.
+python -m venv venv
+
 3. 가상 환경을 활성화합니다.
 
 .\venv\Scripts\Activate.ps1
