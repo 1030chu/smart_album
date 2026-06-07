@@ -15,6 +15,9 @@ cd backend
 
 (venv) PS ...
 
+터미널(venv)에서 실행하세요.
+pip install -r requirements.txt
+
 4. FastAPI를 시작합니다.
 
 python -m uvicorn main:app --reload
